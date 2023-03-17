@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>363</width>
+    <height>559</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Text to Speech</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Imgs/kontho ico.ico</normaloff>Imgs/kontho ico.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background-color: rgb(255, 255, 255);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="leftMargin">
+       <number>4</number>
+      </property>
+      <property name="rightMargin">
+       <number>4</number>
+      </property>
+      <property name="bottomMargin">
+       <number>9</number>
+      </property>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="cancel_pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+ color: white;
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+border-radius:5px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="ReSepushButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Recommended setting</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="Signal_label">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="Export_Button">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+ color: white;
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+border-radius:5px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Export mp3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="4">
+       <widget class="QPushButton" name="CreateSubtitleFilePushButton">
+        <property name="text">
+         <string>Cteate Caption/Subtitle file </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="minimumSize">
+       <size>
+        <width>345</width>
+        <height>430</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>400</width>
+        <height>7000</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(214, 214, 214);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>3</number>
+       </property>
+       <item row="14" column="0" colspan="7">
+        <widget class="QGroupBox" name="groupBox_11">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>138</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(220, 220, 220);</string>
+         </property>
+         <property name="title">
+          <string>Truncate Silence settings</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="horizontalSpacing">
+           <number>6</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>4</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Threshold:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="styleSheet">
+             <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Minimum Silence length:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLabel" name="label_6">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>MilliSec.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0" colspan="3">
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QSlider" name="horizontalSlider_2">
+            <property name="minimum">
+             <number>-50</number>
+            </property>
+            <property name="maximum">
+             <number>-18</number>
+            </property>
+            <property name="value">
+             <number>-30</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="tickPosition">
+             <enum>QSlider::TicksAbove</enum>
+            </property>
+            <property name="tickInterval">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="3">
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="3">
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="2">
+           <widget class="QLabel" name="label_8">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>MilliSec.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="Threshold_lineEdit">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>21</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit{
+
+	
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	
+	background-color: rgb(249, 249, 249);
+}</string>
+            </property>
+            <property name="inputMethodHints">
+             <set>Qt::ImhPreferNumbers</set>
+            </property>
+            <property name="text">
+             <string>-30</string>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>DB</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="styleSheet">
+             <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Truncate to:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QSpinBox" name="doubleSpinBox_2">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+
+	
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	
+	background-color: rgb(249, 249, 249);
+}</string>
+            </property>
+            <property name="minimum">
+             <number>100</number>
+            </property>
+            <property name="maximum">
+             <number>10000</number>
+            </property>
+            <property name="value">
+             <number>1000</number>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QSpinBox" name="doubleSpinBox_3">
+            <property name="styleSheet">
+             <string notr="true">QSpinBox{
+
+	
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	
+	background-color: rgb(249, 249, 249);
+}</string>
+            </property>
+            <property name="minimum">
+             <number>100</number>
+            </property>
+            <property name="maximum">
+             <number>10000</number>
+            </property>
+            <property name="value">
+             <number>600</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Pitch:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0" colspan="7">
+        <widget class="Line" name="line_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0" colspan="5">
+        <widget class="QCheckBox" name="checkBox">
+         <property name="text">
+          <string>Truncate Silence</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0" colspan="7">
+        <widget class="Line" name="line_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="6">
+        <widget class="Line" name="line_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0" colspan="2">
+        <widget class="QLabel" name="label_9">
+         <property name="styleSheet">
+          <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Speed:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3" rowspan="2" colspan="4">
+        <widget class="QComboBox" name="comboBox">
+         <property name="styleSheet">
+          <string notr="true">QComboBox{	
+	font: 12pt ;
+	background-color: rgb(249, 249, 249);
+
+}
+QListView{
+	background-color: rgb(225, 225, 225);
+}</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>bn-BD-NabanitaNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>bn-BD-PradeepNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>bn-IN-BashkarNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>bn-IN-TanishaaNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-AU-NatashaNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-AU-WilliamNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-CA-ClaraNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-CA-LiamNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-IN-NeerjaNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-IN-PrabhatNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-GB-LibbyNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-GB-MaisieNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-GB-RyanNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-GB-SoniaNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-GB-ThomasNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-US-AnaNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-US-AriaNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-US-ChristopherNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-US-EricNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-US-GuyNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-US-JennyNeural</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>en-US-MichelleNeural</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="Line" name="line_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="7">
+        <widget class="Line" name="line_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="3">
+        <widget class="QLabel" name="label_10">
+         <property name="styleSheet">
+          <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Language and Voice:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="3" colspan="4">
+        <widget class="QDoubleSpinBox" name="doubleSpinBox">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QDoubleSpinBox{
+
+	
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	
+	background-color: rgb(249, 249, 249);
+}</string>
+         </property>
+         <property name="suffix">
+          <string> X</string>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>0.500000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1.500000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1" colspan="6">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QSlider" name="Pitch_horizontalSlider">
+           <property name="minimum">
+            <number>-20</number>
+           </property>
+           <property name="maximum">
+            <number>20</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="Pitch_lineEdit">
+           <property name="maximumSize">
+            <size>
+             <width>60</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+
+	
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	
+	background-color: rgb(249, 249, 249);
+}</string>
+           </property>
+           <property name="text">
+            <string>0Hz</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="6" column="0" colspan="7">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="1" column="0">
+           <widget class="QComboBox" name="comboBox_2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>182</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{	
+	font: 12pt ;
+	background-color: rgb(249, 249, 249);
+
+}
+QListView{
+	background-color: rgb(225, 225, 225);
+}</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>en-AU-NatashaNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-AU-WilliamNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-CA-ClaraNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-CA-LiamNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-IN-NeerjaNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-IN-PrabhatNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-GB-LibbyNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-GB-MaisieNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-GB-RyanNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-GB-SoniaNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-GB-ThomasNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-US-AnaNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-US-AriaNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-US-ChristopherNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-US-EricNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-US-GuyNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-US-JennyNeural</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>en-US-MichelleNeural</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="UDVFES_Checkbox">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Use Different voice for english sentences</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0" rowspan="2" colspan="7">
+        <widget class="QGroupBox" name="groupBox_18">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="leftMargin">
+           <number>3</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_11">
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>Imgs/microsoft_edge_macos_bigsur_icon_189983.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_12">
+            <property name="styleSheet">
+             <string notr="true">font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Edge Text to speech debugged by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>Imgs/kontho ico.ico</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="3">
+        <widget class="QSpinBox" name="spinBox">
+         <property name="suffix">
+          <string> words</string>
+         </property>
+         <property name="prefix">
+          <string>Preview First </string>
+         </property>
+         <property name="minimum">
+          <number>10</number>
+         </property>
+         <property name="maximum">
+          <number>110</number>
+         </property>
+         <property name="value">
+          <number>35</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3" colspan="4">
+        <widget class="QPushButton" name="PreviewPushButton">
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>▶️ Preview</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

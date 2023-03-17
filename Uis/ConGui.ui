@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>633</width>
+    <height>322</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Nms UniConveter</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Imgs/Conveter_PNG.png</normaloff>Imgs/Conveter_PNG.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+  background-color: rgb(105, 171, 216);
+}
+QPushButton {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 12px;
+    padding:2px;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #3498db, stop: 1 #2980b9);
+}
+QPushButton:hover {
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #3cb0fd, stop: 1 #3498db);
+}
+QPushButton:pressed {
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #000000, stop: 1 #2980b9);
+}
+QTextEdit{
+	font: 13pt  &quot;./Fonts/Kalpurush&quot; , &quot;Kalpurush&quot; ;
+	background-color: rgb(248, 248, 248);
+}
+
+
+QPushButton{
+ padding-top:2px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+	color: rgb(255, 255, 255);
+border-radius:2px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));&quot;
+}
+
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>3</number>
+   </property>
+   <property name="topMargin">
+    <number>3</number>
+   </property>
+   <property name="rightMargin">
+    <number>3</number>
+   </property>
+   <property name="bottomMargin">
+    <number>3</number>
+   </property>
+   <property name="spacing">
+    <number>3</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="Open_text_pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>40</width>
+       <height>24</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Open text file</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../NMs Keybord/Imgs/Actions-document-open-folder-icon.png</normaloff>../NMs Keybord/Imgs/Actions-document-open-folder-icon.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="Paste_pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>40</width>
+       <height>24</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paste any Text&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paste any Text&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Paste</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../NMs Keybord/Imgs/kisspng-computer-icons-copying-cut-copy-and-paste-clipbo-paste-icon-free-download-png-and-vector-5c5f67badec551.8477141515497563469125.png</normaloff>../NMs Keybord/Imgs/kisspng-computer-icons-copying-cut-copy-and-paste-clipbo-paste-icon-free-download-png-and-vector-5c5f67badec551.8477141515497563469125.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QPushButton" name="Convert_pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>24</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Convert to:</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../NMs Keybord/Imgs/Conveter_PNG.png</normaloff>../NMs Keybord/Imgs/Conveter_PNG.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="QPushButton" name="Clear_pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>24</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Clear all</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../NMs Keybord/Imgs/PngItem_4040102.png</normaloff>../NMs Keybord/Imgs/PngItem_4040102.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QPushButton" name="Copy_pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>24</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Copy converted</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../NMs Keybord/Imgs/copy.png</normaloff>../NMs Keybord/Imgs/copy.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="6">
+    <widget class="QTextEdit" name="second_textEdit">
+     <property name="minimumSize">
+      <size>
+       <width>538</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="acceptRichText">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="6">
+    <widget class="QTextEdit" name="First_textEdit">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>130</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>220</height>
+      </size>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Paste or write Unicode text here </string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5">
+    <widget class="QLabel" name="label_2">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+background : transparent;
+	font: 8pt &quot;MS Shell Dlg 2l&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Use Kalpurush ANSI font</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>2</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QRadioButton" name="BijoyRadioButton">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Unicode to Bijoy&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+QCheckBox:hover {
+  background: rgba(0, 0, 0, 255);
+  border: 2px solid rgba(0, 0, 0, 255);
+  border-radius: 5px;
+}
+
+QCheckBox::indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: white;
+}
+
+QCheckBox::indicator:unchecked {
+  image: url(:/images/checkmark_unchecked.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>Bijoy</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="UnicodeRadioButton">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bijoy to Unicode &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>Unicode</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

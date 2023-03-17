@@ -1,0 +1,2674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1115</width>
+    <height>702</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WAV to text generator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../.designer/NMs Keybord/Imgs/Wav to text 2 png.png</normaloff>../../.designer/NMs Keybord/Imgs/Wav to text 2 png.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(105, 171, 216);
+background-color: rgb(223, 223, 223);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.955, y2:0, stop:0 rgba(255, 255, 255, 255 ), stop:1 rgba(115, 184, 255, 255));
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="TextPagePushButton">
+      <property name="minimumSize">
+       <size>
+        <width>175</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 11pt &quot;MS Shell Dlg 2l&quot;;
+ color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 255), stop:1 rgba(75, 75, 75, 255));
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+border-bottom-right-radius : 22;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Genareted text Page</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <spacer name="horizontalSpacer_12">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="Save_pushButton">
+      <property name="minimumSize">
+       <size>
+        <width>72</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 11pt &quot;MS Shell Dlg 2l&quot;;
+	color: rgb(0, 0, 0);
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Export </string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../.designer/NMs Keybord/Imgs/Save-as-icon.png</normaloff>../../.designer/NMs Keybord/Imgs/Save-as-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>15</width>
+        <height>15</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="HomePagePushButton">
+      <property name="minimumSize">
+       <size>
+        <width>175</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 11pt &quot;MS Shell Dlg 2l&quot;;
+ color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 255), stop:1 rgba(75, 75, 75, 255));
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(117, 189, 255, 255), stop:1 rgba(255, 255, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+border-bottom-left-radius : 22;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Home Page</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <spacer name="horizontalSpacer_13">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="0" colspan="5">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="1" column="0">
+         <widget class="QFrame" name="frame">
+          <property name="styleSheet">
+           <string notr="true">QFrame{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.955, y2:0, stop:0 rgba(115, 184, 255, 255), stop:1 rgba(255, 255, 255, 255));
+
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <property name="leftMargin">
+            <number>4</number>
+           </property>
+           <property name="rightMargin">
+            <number>4</number>
+           </property>
+           <item row="4" column="0" colspan="4">
+            <widget class="QProgressBar" name="progressBar">
+             <property name="styleSheet">
+              <string notr="true">QProgressBar{
+	border:1px solid white;
+	border-radius: 9px;
+	color: Black;
+}
+QProgressBar::chunk {
+	
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0.261, stop:0 rgba(0, 0, 0, 255), stop:0.0227273 rgba(20, 158, 0, 255), stop:1 rgba(59, 255, 0, 255));
+	border-radius :6px;
+}
+</string>
+             </property>
+             <property name="value">
+              <number>24</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="4">
+            <widget class="QLabel" name="label_10">
+             <property name="styleSheet">
+              <string notr="true">background:transparent;</string>
+             </property>
+             <property name="text">
+              <string>Creating audio chunks and detecting nonsilent_data. Please wait</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1" colspan="2">
+            <widget class="QPushButton" name="Generate_pushButton">
+             <property name="maximumSize">
+              <size>
+               <width>1000</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 14pt &quot;MS Shell Dlg 2l&quot;;
+ color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 255), stop:1 rgba(75, 75, 75, 255));
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+border-top-left-radius : 25;
+border-top-right-radius : 25;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+             </property>
+             <property name="text">
+              <string>Generate text</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="4">
+            <widget class="QTabWidget" name="tabWidget">
+             <property name="styleSheet">
+              <string notr="true">QTabWidget{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.955, y2:0, stop:0 rgba(115, 184, 255, 255), stop:1 rgba(255, 255, 255, 255));
+
+}
+QLabel{
+background: transparent;
+}</string>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tab">
+              <attribute name="title">
+               <string>Audio File</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="2" column="1" colspan="3">
+                <widget class="QGroupBox" name="groupBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>100</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>110</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QGroupBox{
+border: 2px solid rgba(250, 250, 250, 250);
+border-radius: 2px;
+}
+QLineEdit{
+	
+	background-color: rgb(255, 255, 255);
+	border-bottom: 2px solid;
+
+	border-bottom-color: qlineargradient(spread:reflect, x1:0, y1:0.477, x2:0, y2:1, stop:0 rgba(97, 97, 97, 255), stop:1 rgba(255, 255, 255, 255));
+	border-radius: 2px;
+
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+QLabel{
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_2">
+                  <item row="0" column="5">
+                   <widget class="QPushButton" name="Copy_file_pathpushButton">
+                    <property name="minimumSize">
+                     <size>
+                      <width>85</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string>Copy file path</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_2">
+                    <property name="styleSheet">
+                     <string notr="true">background: transparent;</string>
+                    </property>
+                    <property name="text">
+                     <string>File name   :</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="4">
+                   <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="5" column="1">
+                   <widget class="QLineEdit" name="Duration_lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>140</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="file_name_lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>140</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="0">
+                   <widget class="QLabel" name="label_5">
+                    <property name="text">
+                     <string>Duration     :</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLineEdit" name="Size_lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>140</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1" rowspan="2">
+                   <widget class="QLineEdit" name="TypeOf_filelineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>140</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="3" colspan="3">
+                   <widget class="QLabel" name="label_6">
+                    <property name="text">
+                     <string>Select language:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2" rowspan="6">
+                   <widget class="Line" name="line_5">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_3">
+                    <property name="minimumSize">
+                     <size>
+                      <width>30</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Type of file :</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <widget class="QLabel" name="label">
+                    <property name="text">
+                     <string>File path:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="label_4">
+                    <property name="text">
+                     <string>Size           :</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="6">
+                   <widget class="QPushButton" name="PlayPathButton">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Play</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="3" colspan="4">
+                   <widget class="QLineEdit" name="File_path_lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="readOnly">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="3" colspan="4">
+                   <widget class="QComboBox" name="Language_comboBox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QComboBox{
+background-color: rgba(250, 250, 250, 250);
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+QListView{
+ 
+	background-color: rgb(123, 202, 254);
+	
+	border-radius:1px;
+}
+</string>
+                    </property>
+                    <property name="maxVisibleItems">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>Bengali (Bangladesh) bn-BD</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Bengali (India)	bn-IN</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>English (Australia) en-AU</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>English (Canada) en-CA</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>English (Ghana) en-GH</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>English (India)	en-IN</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>English (United Kingdom) en-GB</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>English (United States) en-US</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Urdu (Pakistan) ur-PK</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="4" column="1" colspan="3">
+                <widget class="QGroupBox" name="groupBox_2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QGroupBox{
+border: 2px solid rgba(250, 250, 250, 250);
+border-radius: 2px;
+}
+QLineEdit{
+	
+	background-color: rgb(255, 255, 255);
+	border-bottom: 2px solid;
+
+	border-bottom-color: qlineargradient(spread:reflect, x1:0, y1:0.477, x2:0, y2:1, stop:0 rgba(97, 97, 97, 255), stop:1 rgba(255, 255, 255, 255));
+	border-radius: 2px;
+
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+}
+QLabel{
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_3">
+                  <item row="7" column="5">
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="text">
+                     <string>Reset</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1">
+                   <widget class="QLineEdit" name="lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0" colspan="5">
+                   <widget class="QSlider" name="horizontalSlider">
+                    <property name="minimum">
+                     <number>15</number>
+                    </property>
+                    <property name="maximum">
+                     <number>50</number>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="4">
+                   <widget class="Line" name="line_4">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="6">
+                   <widget class="QPushButton" name="SaveSettingspushButton">
+                    <property name="text">
+                     <string>Save Settings</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="4">
+                   <widget class="Line" name="line_3">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="label_7">
+                    <property name="text">
+                     <string>Min silence len:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1" colspan="2">
+                   <widget class="QSpinBox" name="spinBox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="toolTip">
+                     <string notr="true">The minimum length for silent sections is in milliseconds</string>
+                    </property>
+                    <property name="toolTipDuration">
+                     <number>2</number>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                    </property>
+                    <property name="minimum">
+                     <number>100</number>
+                    </property>
+                    <property name="maximum">
+                     <number>10000</number>
+                    </property>
+                    <property name="value">
+                     <number>500</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="0">
+                   <widget class="QLabel" name="label_9">
+                    <property name="text">
+                     <string>Silence threshold (db):</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="7">
+                   <widget class="QLabel" name="label_8">
+                    <property name="text">
+                     <string>Provide some extra info about the audio so we can generate text more accurately</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0" colspan="7">
+                   <widget class="Line" name="line">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="5" colspan="2">
+                   <widget class="QCheckBox" name="checkBox">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: transparent</string>
+                    </property>
+                    <property name="text">
+                     <string>Include Time stamps for SRT file</string>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="5" colspan="2">
+                   <widget class="QCheckBox" name="ChunckscheckBox">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: transparent</string>
+                    </property>
+                    <property name="text">
+                     <string>Delete chuncks after generating</string>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="8" column="0" colspan="7">
+                   <layout class="QVBoxLayout" name="verticalLayout"/>
+                  </item>
+                  <item row="1" column="0" colspan="7">
+                   <widget class="Line" name="line_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="3">
+                   <widget class="QLabel" name="label_22">
+                    <property name="text">
+                     <string>milliseconds</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="3">
+                   <widget class="QLabel" name="label_23">
+                    <property name="text">
+                     <string>decibel</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="5" column="0" colspan="5">
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="1" column="1">
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="1" column="3">
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="4" column="4">
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="1" column="2">
+                <widget class="QPushButton" name="Open_Audio_pushButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>210</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 14pt &quot;MS Shell Dlg 2l&quot;;
+ color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 255), stop:1 rgba(75, 75, 75, 255));
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+font: 14pt &quot;Microsoft JhengHei UI&quot;;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Open audio file</string>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>26</width>
+                   <height>26</height>
+                  </size>
+                 </property>
+                 <property name="shortcut">
+                  <string>Ctrl+O</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" colspan="3">
+                <spacer name="horizontalSpacer_14">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="6" column="0" colspan="5">
+                <layout class="QGridLayout" name="gridLayout_12"/>
+               </item>
+               <item row="4" column="0">
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="2">
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_2">
+              <attribute name="title">
+               <string>Text File</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="0" column="4">
+                <spacer name="horizontalSpacer_10">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="TextFilepushButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>225</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+ padding-top:2px;
+	
+	font: 14pt &quot;Microsoft JhengHei UI&quot;;
+ color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 255), stop:1 rgba(75, 75, 75, 255));
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Open reference text file</string>
+                 </property>
+                 <property name="shortcut">
+                  <string>Ctrl+Alt+O</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <spacer name="horizontalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="1">
+                <spacer name="horizontalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="1" column="1" colspan="3">
+                <widget class="QGroupBox" name="groupBox_3">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>38</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QGroupBox{
+border: 2px solid rgba(250, 250, 250, 250);
+border-radius: 2px;
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.955, y2:0, stop:0 rgba(115, 184, 255, 255), stop:1 rgba(255, 255, 255, 255));
+}
+QLineEdit{
+	
+	background-color: rgb(255, 255, 255);
+	border-bottom: 2px solid;
+
+	border-bottom-color: qlineargradient(spread:reflect, x1:0, y1:0.477, x2:0, y2:1, stop:0 rgba(97, 97, 97, 255), stop:1 rgba(255, 255, 255, 255));
+	border-radius: 2px;
+
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+QLabel{
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_5">
+                  <item row="0" column="1">
+                   <widget class="QLabel" name="label_11">
+                    <property name="text">
+                     <string>File Name:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1" colspan="2">
+                   <widget class="QSlider" name="horizontalSlider_2">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="5">
+                   <widget class="QLabel" name="label_17">
+                    <property name="text">
+                     <string>Num. of Sentences: </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QLabel" name="label_14">
+                    <property name="text">
+                     <string>File Type:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1">
+                   <widget class="QLabel" name="label_13">
+                    <property name="text">
+                     <string>File Path</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <spacer name="horizontalSpacer_9">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="0" column="5">
+                   <widget class="QLabel" name="label_16">
+                    <property name="text">
+                     <string>Number of  Words:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="8">
+                   <spacer name="horizontalSpacer_8">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="4" column="1" colspan="2">
+                   <widget class="QCheckBox" name="match_sequence_checkBox">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: transparent</string>
+                    </property>
+                    <property name="text">
+                     <string>Match Sequence with recognized sentences</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QLineEdit" name="File_lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>140</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="5">
+                   <widget class="QCheckBox" name="Skip_checkBox">
+                    <property name="styleSheet">
+                     <string notr="true">background: transparent</string>
+                    </property>
+                    <property name="text">
+                     <string>Skip recognation</string>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="5">
+                   <widget class="QLabel" name="label_12">
+                    <property name="text">
+                     <string>Sentence Spliters:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="6">
+                   <widget class="QLineEdit" name="Sentance_spliter_lineEdit"/>
+                  </item>
+                  <item row="3" column="2" colspan="5">
+                   <widget class="QLineEdit" name="file_path"/>
+                  </item>
+                  <item row="7" column="1" colspan="7">
+                   <widget class="QLabel" name="label_18">
+                    <property name="text">
+                     <string>Note that; to use this feature effectively you have to select a script which
+could be any written format of recorded audio with perfect punctuations in it.
+That's mean whenever the speaker has taken a pause while recording
+there should be one of the sentence spliters like , . |
+And you might have to play with the settings to get the perfect combination </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="6" colspan="2">
+                   <widget class="QLineEdit" name="Num_of_words_lineEdit"/>
+                  </item>
+                  <item row="2" column="1">
+                   <widget class="QLabel" name="label_15">
+                    <property name="text">
+                     <string>Size:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="4" rowspan="3">
+                   <widget class="Line" name="line_7">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="7">
+                   <widget class="QPushButton" name="copy_text_file_pushButton">
+                    <property name="minimumSize">
+                     <size>
+                      <width>85</width>
+                      <height>24</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string>Copy file path</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="6" colspan="2">
+                   <widget class="QLineEdit" name="Num_of_sentance_lineEdit_2"/>
+                  </item>
+                  <item row="1" column="7">
+                   <widget class="QPushButton" name="Split_pushButton">
+                    <property name="text">
+                     <string>Split</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="5">
+                   <widget class="QCheckBox" name="remove_spaces_checkBox">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: transparent</string>
+                    </property>
+                    <property name="text">
+                     <string>Remove Extra Spaces</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="2">
+                   <widget class="QLineEdit" name="Minimum_matched_ratio_lineEdit">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>72</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="1">
+                   <widget class="QLabel" name="label_19">
+                    <property name="text">
+                     <string>Minimum match ratio:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <widget class="QPushButton" name="OpenTXTButton">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Open txt</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2" colspan="2">
+                   <widget class="QLineEdit" name="File_type_lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>140</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="2" colspan="2">
+                   <widget class="QLineEdit" name="SizelineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>140</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <spacer name="horizontalSpacer_11">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QPushButton" name="Cancel_pushButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 14pt &quot;MS Shell Dlg 2l&quot;;
+ color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 255), stop:1 rgba(75, 75, 75, 255));
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+border-top-left-radius : 25;
+border-top-right-radius : 25;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+             </property>
+             <property name="text">
+              <string>Cancel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QGridLayout" name="gridLayout_11">
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>27</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+	color: rgb(255, 255, 255);
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+border-radius:5px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="leftMargin">
+            <number>6</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="play_audio_pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>⏯ Play</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>12</width>
+               <height>12</height>
+              </size>
+             </property>
+             <property name="shortcut">
+              <string>Space</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="duration_label">
+             <property name="minimumSize">
+              <size>
+               <width>65</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+             </property>
+             <property name="text">
+              <string>00:00:00</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_8">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="media_slider_horizontalSlider">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="Playback_speed_comboBox">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>22</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>1x</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>1.25x</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>1.5x</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>1.75x</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>2x</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>26</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+ padding-top:3px;
+ padding-bottom:3px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+	color: rgb(255, 255, 255);
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="Copy_pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>72</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Copy</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>Imgs/copy.png</normaloff>Imgs/copy.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>14</width>
+               <height>14</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="paste_pushButton">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Paste</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Edit_pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>72</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Edit</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Up_pushbutton">
+             <property name="minimumSize">
+              <size>
+               <width>72</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Up</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="DownPushButton">
+             <property name="minimumSize">
+              <size>
+               <width>72</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Down</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Make_room_pushbutton">
+             <property name="minimumSize">
+              <size>
+               <width>72</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Make Room</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="RemovePushButton">
+             <property name="minimumSize">
+              <size>
+               <width>72</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Remove</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="open_table__pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>72</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Open</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Clear_pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>72</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Clear All</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../.designer/NMs Keybord/Imgs/PngItem_4040102.png</normaloff>../../.designer/NMs Keybord/Imgs/PngItem_4040102.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0">
+            <widget class="QTableWidget" name="tableWidget">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+font: 11pt &quot;Hind Siliguri&quot;, &quot;Kalpurush&quot;;
+
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(117, 189, 255, 255), stop:1 rgba(132, 198, 255, 255));</string>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::DoubleClicked</set>
+             </property>
+             <column>
+              <property name="text">
+               <string>TimeStamp</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Caption</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QTextEdit" name="JusttextEdit_2">
+             <property name="styleSheet">
+              <string notr="true">font: 57 12pt &quot;Hind Siliguri Medium&quot;, &quot;Kalpurush&quot;, &quot;Siyam Rupali&quot; ;
+
+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_18">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QFrame" name="frame_2">
+          <property name="styleSheet">
+           <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_15">
+           <item row="0" column="1" colspan="5">
+            <widget class="Line" name="line_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QCheckBox" name="SimpleTextcheckBox">
+             <property name="styleSheet">
+              <string notr="true">background: Transparent
+</string>
+             </property>
+             <property name="text">
+              <string>Simple Text file</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="5">
+            <widget class="QPushButton" name="SaveExportPushButton">
+             <property name="text">
+              <string>Save</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="SRTfilecheckBox">
+             <property name="styleSheet">
+              <string notr="true">background: Transparent
+</string>
+             </property>
+             <property name="text">
+              <string>Srt file</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <spacer name="horizontalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="1" colspan="5">
+            <widget class="Line" name="line_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1" colspan="5">
+            <widget class="Line" name="line_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1" colspan="5">
+            <widget class="QGroupBox" name="groupBox_11">
+             <property name="styleSheet">
+              <string notr="true">QGroupBox{
+font: 63 10pt &quot;Montserrat SemiBold&quot;;
+background: transparent
+}</string>
+             </property>
+             <property name="title">
+              <string>Select a column to export</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QCheckBox" name="RColumncheckBox">
+                <property name="styleSheet">
+                 <string notr="true">background: transparent</string>
+                </property>
+                <property name="text">
+                 <string>Recognized Caption</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="SColumnCheckBox">
+                <property name="styleSheet">
+                 <string notr="true">background: transparent</string>
+                </property>
+                <property name="text">
+                 <string>Splited Script</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="MColumnCheckBox">
+                <property name="styleSheet">
+                 <string notr="true">background: transparent</string>
+                </property>
+                <property name="text">
+                 <string>Matched Caption</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="5">
+            <widget class="QGroupBox" name="groupBox_8">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit{
+background-color: rgb(61, 187, 255);
+}</string>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_14">
+              <item row="2" column="1" colspan="4">
+               <widget class="QGroupBox" name="groupBox_10">
+                <property name="title">
+                 <string/>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="StartLineEdit">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(191, 189, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="EndLineEdit">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(191, 189, 255, 255), stop:1 rgba(255, 255, 255, 255));</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="UseCustomFontcheckBox">
+                <property name="maximumSize">
+                 <size>
+                  <width>143</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background: Transparent
+</string>
+                </property>
+                <property name="text">
+                 <string>Use custom Font</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="3">
+               <widget class="Line" name="line_13">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <spacer name="horizontalSpacer_17">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="6" column="2">
+               <spacer name="horizontalSpacer_16">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="4" column="0" colspan="5">
+               <widget class="QGroupBox" name="groupBox_9">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_16">
+                 <item row="5" column="8">
+                  <widget class="QPushButton" name="WhitePushButton">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="6">
+                  <widget class="QPushButton" name="colorPickerpushButton">
+                   <property name="text">
+                    <string>color picker</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="7">
+                  <widget class="QPushButton" name="BlackpushButton">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(0, 0, 0);</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="9">
+                  <widget class="Line" name="line_21">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="10">
+                  <widget class="QPushButton" name="SetAsSavedPushButton">
+                   <property name="text">
+                    <string>Set as Saved</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="3">
+                  <widget class="QCheckBox" name="CustomColorcheckBox">
+                   <property name="styleSheet">
+                    <string notr="true">background: Transparent
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Font color:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="11" colspan="2">
+                  <widget class="QPushButton" name="SaveSettingsPushButton">
+                   <property name="text">
+                    <string>Save Settings</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="5">
+                  <widget class="QLineEdit" name="colorCodelineEdit">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="6">
+                  <widget class="QPushButton" name="IncreaseFontsizePushButton">
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>Imgs/img_490057.png</normaloff>Imgs/img_490057.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="7" colspan="2">
+                  <widget class="QPushButton" name="decricePushbutton">
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>Imgs/pngkit_size-icon-png_7886451.png</normaloff>Imgs/pngkit_size-icon-png_7886451.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="9">
+                  <widget class="Line" name="line_14">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="10">
+                  <widget class="QCheckBox" name="ItaliccheckBox">
+                   <property name="styleSheet">
+                    <string notr="true">background: Transparent
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Italic</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0" rowspan="6">
+                  <widget class="Line" name="line_22">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="11">
+                  <widget class="QCheckBox" name="BoldcheckBox">
+                   <property name="styleSheet">
+                    <string notr="true">background: Transparent
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Bold</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2" colspan="2">
+                  <widget class="QCheckBox" name="FontSizecheckBox">
+                   <property name="styleSheet">
+                    <string notr="true">background: Transparent
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Font Size:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="5" colspan="8">
+                  <widget class="QFontComboBox" name="fontComboBox_2">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2" colspan="11">
+                  <widget class="Line" name="line_10">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1" colspan="3">
+                  <widget class="QCheckBox" name="ChooseFontCheckBox">
+                   <property name="styleSheet">
+                    <string notr="true">background: Transparent
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Choose Font:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1" rowspan="4">
+                  <widget class="Line" name="line_15">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="5">
+                  <widget class="QComboBox" name="fontsizecomboBox">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="editable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="currentText">
+                    <string>12</string>
+                   </property>
+                   <property name="currentIndex">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>6</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>8</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>10</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>12</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>15</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>18</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>22</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>24</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>26</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>32</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>34</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>36</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>38</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>40</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>42</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="3" column="2" colspan="11">
+                  <widget class="Line" name="line_11">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="2">
+                  <widget class="Line" name="line_18">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QFrame" name="frame_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>325</width>
+                  <height>185</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="label_20">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>10</y>
+                   <width>320</width>
+                   <height>180</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>320</width>
+                   <height>180</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap>Imgs/BGIMAGE.jpg</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="plainTextEdit">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>1</y>
+                   <width>320</width>
+                   <height>180</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background:Transparent</string>
+                 </property>
+                 <property name="text">
+                  <string>Caption will look like this!</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="4">
+               <widget class="Line" name="line_12">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_21">
+                <property name="styleSheet">
+                 <string notr="true">background: transparent</string>
+                </property>
+                <property name="text">
+                 <string>Characters Per line:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="cherecter_spinBox">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>105</number>
+                </property>
+                <property name="value">
+                 <number>45</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="5">
+            <widget class="Line" name="line_19">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer_19">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1115</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuOpen">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <addaction name="actionWave"/>
+     <addaction name="actionReference_file"/>
+     <addaction name="actionSrt_Table_file"/>
+    </widget>
+    <widget class="QMenu" name="menuExport">
+     <property name="title">
+      <string>Export</string>
+     </property>
+     <addaction name="actionExport_as"/>
+     <addaction name="actionExport_Table"/>
+     <addaction name="actionQuick_Export_as_SRT_file"/>
+    </widget>
+    <addaction name="actionNew"/>
+    <addaction name="menuOpen"/>
+    <addaction name="menuExport"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionCopy"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionPreferrence"/>
+    <addaction name="actionFill_Empty_lines_with_recognized_sentences"/>
+    <addaction name="actionReset"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionRemove_Similarity_Column"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="floating">
+    <bool>true</bool>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout_17">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="title">
+        <string>Edit</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="1" column="0" colspan="2">
+         <widget class="QTextEdit" name="textEdit">
+          <property name="styleSheet">
+           <string notr="true">font: 13pt &quot;Kalpurush&quot;;
+background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="comit_save_pushButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+	color: rgb(255, 255, 255);
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+border-radius:5px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+          </property>
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="Cancel_pushButton_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+ padding-top:2px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+	color: rgb(255, 255, 255);
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+
+border-radius:5px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));\n&quot;
+
+}</string>
+          </property>
+          <property name="text">
+           <string>Cancel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QFontComboBox" name="fontComboBox">
+          <property name="styleSheet">
+           <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(170, 255, 255);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionWave">
+   <property name="text">
+    <string>Wave</string>
+   </property>
+  </action>
+  <action name="actionReference_file">
+   <property name="text">
+    <string>Reference file</string>
+   </property>
+  </action>
+  <action name="actionSrt_Table_file">
+   <property name="text">
+    <string>Srt Table file</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionExport_as">
+   <property name="text">
+    <string>Export as</string>
+   </property>
+  </action>
+  <action name="actionExport_Table">
+   <property name="text">
+    <string>Export Table</string>
+   </property>
+  </action>
+  <action name="actionQuick_Export_as_SRT_file">
+   <property name="text">
+    <string>Quick Export as SRT file</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionPreferrence">
+   <property name="text">
+    <string>Preferrence</string>
+   </property>
+  </action>
+  <action name="actionFill_Empty_lines_with_recognized_sentences">
+   <property name="text">
+    <string>Fill Empty lines with recognized sentences </string>
+   </property>
+  </action>
+  <action name="actionRemove_Similarity_Column">
+   <property name="text">
+    <string>Remove Similarity Column</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

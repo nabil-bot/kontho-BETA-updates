@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>269</width>
+    <height>39</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>30</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Nms Voice pad</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>1</y>
+     <width>265</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QFrame{
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+ border:1px solid rgba(93, 173, 226,255 );
+}
+QFrame:hover{
+ background-color: rgba(108, 177, 223,80);
+
+ border:2px solid rgba(108, 177, 223, 180);
+
+}
+ </string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="Mic_btn">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>2</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Speech to text&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="toolTipDuration">
+     <number>2</number>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="accessibleName">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 10pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 150), stop:1 rgba(75, 75, 75, 150));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 100), stop:1 rgba(2, 200, 255,100));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imgs/Mic 2 png.png</normaloff>Imgs/Mic 2 png.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+    <property name="shortcut">
+     <string>Ctrl+Shift+S</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Settings_btn">
+    <property name="geometry">
+     <rect>
+      <x>211</x>
+      <y>2</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::CustomContextMenu</enum>
+    </property>
+    <property name="toolTip">
+     <string comment="Add Language" extracomment="Add Language">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="toolTipDuration">
+     <number>1</number>
+    </property>
+    <property name="statusTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Add language" extracomment="Add language"/>
+    </property>
+    <property name="accessibleName">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="accessibleDescription">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 10pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 150), stop:1 rgba(75, 75, 75, 150));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 100), stop:1 rgba(2, 200, 255,100));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imgs/Gear 4.png</normaloff>Imgs/Gear 4.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="OnScreenKeyboardBtn">
+    <property name="geometry">
+     <rect>
+      <x>157</x>
+      <y>2</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="toolTip">
+     <string comment="Add Language" extracomment="Add Language">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;On screen keyboard&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="toolTipDuration">
+     <number>1</number>
+    </property>
+    <property name="statusTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Add language" extracomment="Add language"/>
+    </property>
+    <property name="accessibleName">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="accessibleDescription">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 10pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 150), stop:1 rgba(75, 75, 75, 150));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 100), stop:1 rgba(2, 200, 255,100));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imgs/OSK logo png.png</normaloff>Imgs/OSK logo png.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ScriptPad_btn">
+    <property name="geometry">
+     <rect>
+      <x>103</x>
+      <y>2</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="toolTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="toolTipDuration">
+     <number>1</number>
+    </property>
+    <property name="statusTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Add language" extracomment="Add language"/>
+    </property>
+    <property name="accessibleName">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="accessibleDescription">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 10pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 150), stop:1 rgba(75, 75, 75, 150));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 100), stop:1 rgba(2, 200, 255,100));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imgs/Doc pad PNG.png</normaloff>Imgs/Doc pad PNG.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Wav_to_Text_button">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>2</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="toolTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="toolTipDuration">
+     <number>1</number>
+    </property>
+    <property name="statusTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Add language" extracomment="Add language"/>
+    </property>
+    <property name="accessibleName">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="accessibleDescription">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 10pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 150), stop:1 rgba(75, 75, 75, 150));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 100), stop:1 rgba(2, 200, 255,100));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imgs/Wav to text 2 png.png</normaloff>Imgs/Wav to text 2 png.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Listining_label">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>2</y>
+      <width>68</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+border:none;
+	background-color: rgba(250, 250, 250, 100);
+
+	border-radius: 0px;
+	
+	font: 10pt &quot;Arial&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Listening...</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Stop_btn">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>2</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Stop listening&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="toolTipDuration">
+     <number>2</number>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="accessibleName">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 10pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 150), stop:1 rgba(75, 75, 75, 150));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 100), stop:1 rgba(2, 200, 255,100));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imgs/Stop 2 png.png</normaloff>Imgs/Stop 2 png.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Close_btn">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>2</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="toolTipDuration">
+     <number>1</number>
+    </property>
+    <property name="statusTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Add language" extracomment="Add language"/>
+    </property>
+    <property name="accessibleName">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="accessibleDescription">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 10pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 150), stop:1 rgba(75, 75, 75, 150));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 100), stop:1 rgba(2, 200, 255,100));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imgs/Close final correction.png</normaloff>Imgs/Close final correction.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>2</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QProgressBar{
+	border:1px solid white;
+	border-radius: 4px;
+	color: Black;
+	border-color: rgb(0, 102, 226);
+}
+QProgressBar::chunk {
+	
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0.261, stop:0 rgba(0, 0, 0, 255), stop:0.0227273 rgba(20, 158, 0, 255), stop:1 rgba(59, 255, 0, 255));
+	border-radius :4px;
+	
+}
+</string>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="OCR_Btn">
+    <property name="geometry">
+     <rect>
+      <x>184</x>
+      <y>2</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="toolTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="toolTipDuration">
+     <number>1</number>
+    </property>
+    <property name="statusTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Add language" extracomment="Add language"/>
+    </property>
+    <property name="accessibleName">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="accessibleDescription">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 10pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 150), stop:1 rgba(75, 75, 75, 150));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 100), stop:1 rgba(2, 200, 255,100));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imgs/OCR_png.png</normaloff>Imgs/OCR_png.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Lang_Button">
+    <property name="geometry">
+     <rect>
+      <x>29</x>
+      <y>2</y>
+      <width>72</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Switch language&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 12pt &quot;Arial&quot;;
+ 	 color: black;
+	border: 1px solid rgb(3, 134, 253);
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 200), stop:1 rgba(2, 200, 255,215));
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(207, 207, 207, 200), stop:1 rgba(245, 245, 245, 220));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.977727, y2:0, stop:0 rgba(160, 207, 255, 255), stop:1 rgba(255, 255, 255, 255));
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string>English</string>
+    </property>
+    <property name="shortcut">
+     <string>Ctrl+Alt+S</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>28</y>
+      <width>259</width>
+      <height>1</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <zorder>progressBar</zorder>
+   <zorder>Mic_btn</zorder>
+   <zorder>Settings_btn</zorder>
+   <zorder>OnScreenKeyboardBtn</zorder>
+   <zorder>ScriptPad_btn</zorder>
+   <zorder>Wav_to_Text_button</zorder>
+   <zorder>Listining_label</zorder>
+   <zorder>Stop_btn</zorder>
+   <zorder>Close_btn</zorder>
+   <zorder>OCR_Btn</zorder>
+   <zorder>Lang_Button</zorder>
+   <zorder>line</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
