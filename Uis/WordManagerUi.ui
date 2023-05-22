@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Word manager</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTableWidget {
+    background-color: rgb(1, 22, 39);
+    selection-background-color: rgb(188, 243, 255);
+	color:rgb(255, 255, 255);
+	gridline-color:#00695C;
+	font: 57 12pt &quot;Hind Siliguri Medium&quot;;
+}
+QTableWidget::item {
+    color: black;
+}
+QTableWidget::item:hover {
+    background-color: #6eb5d5;
+    color: white;
+}
+QTabWidget::pane {
+    border: 1px solid #000000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+QTabWidget::tab-bar {
+    left: 5px;
+}
+
+QTabBar::tab {
+	background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+    border: 1px solid #000000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    min-width: 80px;
+    padding: 2px;
+	color:white
+}
+
+QTabBar::tab:selected {
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #429de3, stop: 1 #2d70b8);
+	color: rgb(255, 255, 255);
+}
+
+QTabBar::tab:hover {
+	 background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+color:black;
+}
+QLineEdit {  
+	background-color: #f5f5f5;
+    color: black;
+    border: 2px solid white;
+	font: 57 14pt &quot;Hind Siliguri Medium&quot;;
+}
+QLineEdit:focus {
+    border: 2px solid #00bfff;
+}
+QLineEdit:hover {
+	background-color: rgb(224, 237, 244);
+}
+QHeaderView::section {
+	background-color: rgb(105, 171, 216);
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #ffffff;
+}
+QHeaderView::section:checked {
+    background-color: #429de3;
+    color: white;
+}
+
+QDockWidget {
+	background-color: rgb(105, 171, 216);
+    color: white;
+    font-size: 12px;
+    border: 2px solid white;
+}
+
+QScrollBar::handle:vertical { 
+	background-color: rgb(0, 255, 0);
+}
+
+QScrollBar::handle:vertical:pressed {
+
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+}
+
+QPushButton{
+ padding-top:2px;
+padding-bottom:2px;
+ padding-left:6px;
+padding-right:6px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+	color: rgb(255, 255, 255);
+border-radius:2px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+}
+
+
+
+
+QTableWidget {
+    background-color: #f5f5f5;
+    alternate-background-color: #e6e6e6;
+    gridline-color: #cccccc;
+    border: none;
+    selection-background-color: #cceeff;
+    selection-color: #000000;
+   	font: 57 12pt &quot;Hind Siliguri Medium&quot;;
+}
+
+QHeaderView::section {
+    background-color: #d9d9d9;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+QTableWidget::item:selected {
+    background-color: #cceeff;
+    color: #000000;
+}
+
+
+
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>2</number>
+    </property>
+    <property name="rightMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>4</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>0</number>
+    </property>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="ProgressGroupBox">
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{
+background-color: rgb(1, 22, 39);
+border-radius:5px;
+}
+QPushButton{
+ padding-top:2px;
+padding-bottom:2px;
+ padding-left:6px;
+padding-right:6px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+	color: rgb(255, 255, 255);
+border-radius:2px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+}</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="CancelPushButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Cancel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="Progresslabel">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 57 9pt &quot;Hind Siliguri Medium&quot;, &quot;Kalpurush&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <widget class="QProgressBar" name="progressBar">
+         <property name="styleSheet">
+          <string notr="true">QProgressBar{
+	border:1px solid white;
+	border-radius: 2px;
+	color: Black;
+}
+QProgressBar::chunk {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 242, 255, 255), stop:1 rgba(27, 126, 255, 255));
+	border-radius :6px;
+}
+</string>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Bangla</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>9</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>2</number>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item row="2" column="0" colspan="2">
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="accessibleName">
+           <string notr="true"/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <column>
+           <property name="text">
+            <string>Bangla Word</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Main Phonetic</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>28</height>
+           </size>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="banglaLabel">
+             <property name="text">
+              <string>Showing </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="LoadBanglaListPushBtn">
+             <property name="text">
+              <string>Load the complete list</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>English</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="0">
+         <widget class="QTableWidget" name="EnglishTableWidget">
+          <column>
+           <property name="text">
+            <string>Words</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Abbreviation</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>17</height>
+           </size>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="EnglishLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="LoadEnglishPushButton">
+             <property name="text">
+              <string>Load the complete list</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Abbreviation</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="0" colspan="3">
+         <widget class="QTableWidget" name="tableWidget_3">
+          <column>
+           <property name="text">
+            <string>Abbreviations</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Full Versions</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Custom</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="CustomTableWidget">
+          <column>
+           <property name="text">
+            <string>Custom</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Clipboard</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="ClipBoardtableWidget">
+          <column>
+           <property name="text">
+            <string>Time</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Content</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="actionAdd"/>
+    <addaction name="actionRemove"/>
+    <addaction name="actionShowTextEditor"/>
+    <addaction name="actionClear_Undo_List"/>
+    <addaction name="actionTestBanglishAlgo"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="minimumSize">
+    <size>
+     <width>304</width>
+     <height>72</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>77</height>
+    </size>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="windowTitle">
+    <string>Find and replace</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>1000</height>
+        </size>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="minimumSize">
+              <size>
+               <width>85</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>2</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>2</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QCheckBox" name="MatchCaseCheckBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>18</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox {
+ background: transparent;
+}
+
+QCheckBox:disabled {
+  background-color: #d3d3d3;
+  border: 1px solid #808080;
+  color: #808080;
+}
+
+QCheckBox::indicator {
+  width: 12px;
+  height: 12px;
+	border: 2px solid rgb(2, 139, 255);
+}
+
+QCheckBox::indicator:unchecked {
+  image: url(:/images/unchecked.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+  image: url(:/images/unchecked_hover.png);
+	background-color: rgb(0, 227, 255);
+	 width: 14px;
+  height: 14px;
+}
+
+QCheckBox::indicator:checked {
+border: 2px solid green;
+ image: url(Tic_seign.png);
+}
+
+QCheckBox::indicator:checked:hover {
+  image: url(Tic_seign.png);
+ width: 14px;
+  height: 14px;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>MatchCase</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLineEdit" name="lineEdit">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="placeholderText">
+              <string>Find</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLineEdit" name="MatchedNumberLineEdit">
+             <property name="maximumSize">
+              <size>
+               <width>80</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="DownPushButton">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>↓Down</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="UpPushButton">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>↑Up</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="5">
+            <widget class="Line" name="line_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_6">
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>52</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>55</height>
+    </size>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="windowTitle">
+    <string>Add or Remove </string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_6">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="AddPushButton">
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="RemovePushButton">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="SavePushButton">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_8">
+   <property name="minimumSize">
+    <size>
+     <width>296</width>
+     <height>55</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>55</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="windowTitle">
+    <string>copy cut paste</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_8">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="CopyPushButton">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Copy Cell</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="PastePushButton">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Paste to Cell</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="UndoPushButton">
+       <property name="text">
+        <string>Undo</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="RedoPushButton">
+       <property name="text">
+        <string>Redo</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_2">
+   <property name="windowTitle">
+    <string notr="true">Edit Current cell</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout_8">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="SaveChangesPushButton">
+       <property name="text">
+        <string>Save Changes to the Cell</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="RowColumnLineEdit">
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QPlainTextEdit" name="plainTextEdit">
+       <property name="styleSheet">
+        <string notr="true">QPlainTextEdit {
+  background-color: #fff;
+	background-color: rgb(232, 232, 232);
+  color: #000;
+  font: &quot;SolaimanLipi&quot;;
+	font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+QPlainTextEdit:focus {
+  outline: none;
+  border: 1px solid #5d9cec;
+}
+
+QPlainTextEdit::selection {
+  background-color: #5d9cec;
+  color: #fff;
+}
+
+QPlainTextEdit::cursor {
+  width: 2px;
+  background-color: #000;
+}
+
+QScrollBar:vertical {
+  width: 10px;
+  background-color: #f2f2f2;
+  margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+  background-color: #5d9cec;
+  min-height: 20px;
+}
+
+QScrollBar::add-line:vertical {
+  height: 0px;
+}
+
+QScrollBar::sub-line:vertical {
+  height: 0px;
+}</string>
+       </property>
+       <property name="plainText">
+        <string/>
+       </property>
+       <property name="cursorWidth">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionAdd">
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionShowTextEditor">
+   <property name="text">
+    <string>Text Editor</string>
+   </property>
+  </action>
+  <action name="actionAdd_Words_from_file">
+   <property name="text">
+    <string>Add Words from file</string>
+   </property>
+  </action>
+  <action name="actionReload">
+   <property name="text">
+    <string>Reload</string>
+   </property>
+  </action>
+  <action name="actionClear_Undo_List">
+   <property name="text">
+    <string>Clear Undo List</string>
+   </property>
+  </action>
+  <action name="actionGetUniqueTable">
+   <property name="text">
+    <string>GetUniqueTable</string>
+   </property>
+  </action>
+  <action name="actionTestBanglishAlgo">
+   <property name="text">
+    <string>TestBanglishAlgo</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

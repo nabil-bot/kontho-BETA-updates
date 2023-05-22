@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>315</width>
+    <height>211</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Window Inspector</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit {
+	background-color: rgb(1, 22, 39);    
+    color: white;
+    border: 2px solid white;
+    font-size: 14px;
+}
+QLineEdit:focus {
+    border: 2px solid #00bfff;
+}
+QLineEdit:hover {
+	background-color: #000080;
+}
+QPushButton{
+ padding-top:2px;
+padding-bottom:2px;
+ padding-left:6px;
+padding-right:6px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+	color: rgb(255, 255, 255);
+border-radius:2px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+}
+QCheckBox {
+ background: transparent;
+}
+
+QCheckBox:disabled {
+  background-color: #d3d3d3;
+  border: 1px solid #808080;
+  color: #808080;
+}
+
+QCheckBox::indicator {
+  width: 12px;
+  height: 12px;
+	border: 2px solid rgb(2, 139, 255);
+}
+
+QCheckBox::indicator:unchecked {
+  image: url(:/images/unchecked.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+  image: url(:/images/unchecked_hover.png);
+	background-color: rgb(0, 227, 255);
+	 width: 14px;
+  height: 14px;
+}
+
+QCheckBox::indicator:checked {
+border: 2px solid green;
+ image: url(Tic_seign.png);
+}
+
+QCheckBox::indicator:checked:hover {
+  image: url(Tic_seign.png);
+ width: 14px;
+  height: 14px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <item row="1" column="1">
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QPushButton" name="ColourPushButton">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="MouseLineEdit">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="titleLineEdit">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QPushButton" name="CopyMousePushButton">
+      <property name="text">
+       <string>copy</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QLineEdit" name="ColourLineEdit">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QPushButton" name="FollowPushButton">
+      <property name="text">
+       <string>Follow Mouse</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="CopyTitlePushButton">
+      <property name="text">
+       <string>copy</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>color (RGB)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Window title:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QPushButton" name="CopyColourpushButton">
+      <property name="text">
+       <string>copy</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Mouse (X, Y)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>press Ctrl + Space to make a window stay always on top</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

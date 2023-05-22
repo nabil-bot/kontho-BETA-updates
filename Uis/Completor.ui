@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>962</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>100</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Nms_completer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>102</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>25</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(185, 229, 255, 255), stop:1 rgba(130, 197, 255, 255));
+border:1px solid rgb(0, 0, 127);
+border-radius: 10px;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="PinPushButton">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>1</y>
+       <width>28</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>28</width>
+       <height>23</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pin On top&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+
+border-bottom-left-radius:1px;
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+border-top-left-radius:1px;
+
+
+font: 8 pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 255), stop:1 rgba(75, 75, 75, 255));
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(62, 255, 41, 255), stop:1 rgba(5, 240, 255, 255));
+border:1px solid rgb(255, 255, 255);
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>⚙</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SpellCheckPushButton">
+     <property name="geometry">
+      <rect>
+       <x>2</x>
+       <y>1</y>
+       <width>28</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spell Check&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-bottom-left-radius:8px;
+border-top-right-radius: 1px;
+border-bottom-right-radius: 1px;
+border-top-left-radius:8px;
+font: 9pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 255), stop:1 rgba(75, 75, 75, 255));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(2, 200, 255,255));
+	border:1px solid rgb(85, 255, 255);
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>S✓</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>18</width>
+       <height>18</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="ACcheckBox">
+     <property name="geometry">
+      <rect>
+       <x>33</x>
+       <y>0</y>
+       <width>37</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Auto Complete&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox {
+ background: transparent;
+}
+
+QCheckBox:disabled {
+  background-color: #d3d3d3;
+  border: 1px solid #808080;
+  color: #808080;
+}
+
+QCheckBox::indicator {
+  width: 10px;
+  height: 10px;
+	border: 2px solid rgb(2, 139, 255);
+}
+
+QCheckBox::indicator:unchecked {
+  image: url(:/images/unchecked.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+  image: url(:/images/unchecked_hover.png);
+	background-color: rgb(0, 227, 255);
+	 width: 12px;
+  height: 12px;
+}
+
+QCheckBox::indicator:checked {
+border: 2px solid green;
+ image: url(Tic_seign.png);
+}
+
+QCheckBox::indicator:checked:hover {
+  image: url(Tic_seign.png);
+ width: 12px;
+  height: 12px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>AC</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="Settings_btn">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>600</y>
+      <width>22</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::CustomContextMenu</enum>
+    </property>
+    <property name="toolTip">
+     <string comment="Add Language" extracomment="Add Language">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="toolTipDuration">
+     <number>1</number>
+    </property>
+    <property name="statusTip">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="whatsThis">
+     <string comment="Add language" extracomment="Add language"/>
+    </property>
+    <property name="accessibleName">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="accessibleDescription">
+     <string comment="Add Language" extracomment="Add Language"/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-bottom-left-radius:5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-left-radius:5px;
+font: 10pt &quot;Arial&quot;;
+ 	 color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(33, 33, 33, 150), stop:1 rgba(75, 75, 75, 150));
+	 background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 100), stop:1 rgba(2, 200, 255,100));
+	 
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 250), stop:1 rgba(3, 115, 255, 250));\n&quot;
+
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Imgs/Gear 4.png</normaloff>Imgs/Gear 4.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>22</y>
+      <width>276</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(2,200,255,255));
+background-color: rgb(255, 255, 255);
+border-bottom-left-radius:12px;
+border-top-right-radius: 12px;
+border-bottom-right-radius: 2px;
+border-top-left-radius:2px;
+border: 2px solid rgb(89, 48, 255);
+border-color: rgb(255, 0, 0);
+border-color: rgb(0, 255, 0);
+padding: 3px;
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QListWidget" name="listWidget">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QListWidget{
+	background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(2,200,255,255));
+	background: transparent;
+	border:none;
+	font-family: &quot;Hind Siliguri Medium&quot;;
+	font-size: 18px;
+}
+QListWidget::item:selected {
+    background-color: #ADD8E6;
+    color: black;
+}
+QListWidget::item:hover {
+    background-color: #87CEFA; 
+    color: black;
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="styleSheet">
+        <string notr="true">border:none;</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="horizontalSpacing">
+         <number>0</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>2</number>
+        </property>
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>frame_2</zorder>
+   <zorder>frame</zorder>
+   <zorder>Settings_btn</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

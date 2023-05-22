@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>108</width>
+    <height>173</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ListContextMenu</string>
+  </property>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>61</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+    background-color: #ffffff; /* sets the background color of the list widget */
+}
+
+QListWidget::item {
+    padding: 2px;
+}
+
+QListWidget::item:selected {
+    background-color: #F0F0F0; /* sets the background color of a selected item */
+    color: #000000; /* sets the text color of a selected item */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Copy</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Edit</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>563</width>
+    <height>229</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add or Edit Word</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{
+ padding-top:2px;
+padding-bottom:2px;
+ padding-left:6px;
+padding-right:6px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+	color: rgb(255, 255, 255);
+border-radius:2px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+
+}
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+}
+QTableWidget {
+    background-color: #f5f5f5;
+    alternate-background-color: #e6e6e6;
+    gridline-color: #cccccc;
+    border: none;
+    selection-background-color: #cceeff;
+    selection-color: #000000;
+  	 font: 57 12pt &quot;Hind Siliguri Medium&quot;;
+}
+
+QHeaderView::section {
+    background-color: #d9d9d9;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+QTableWidget::item:selected {
+    background-color: #cceeff;
+    color: #000000;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0" rowspan="2">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="styleSheet">
+          <string notr="true">QRadioButton {
+    font-size: 13px;
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+QRadioButton::indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #666;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #666;
+}
+
+QRadioButton:hover {
+    background-color: #f5f5f5;
+}
+
+QRadioButton:pressed {
+    background-color: #ccc;
+}
+</string>
+         </property>
+         <property name="title">
+          <string>List to save</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QRadioButton" name="BanglaRadioButton">
+            <property name="text">
+             <string>Bangla</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="EnglishRadioButton">
+            <property name="text">
+             <string>English</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="4">
+        <widget class="QTableWidget" name="tableWidget">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>75</height>
+          </size>
+         </property>
+         <row>
+          <property name="text">
+           <string>1</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Main word</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Main Phonetic</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>2</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>3</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>4</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2" colspan="2">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="RemovePushButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Remove</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="SavePushButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+ padding-top:2px;
+padding-bottom:2px;
+ padding-left:6px;
+padding-right:6px;
+	font: 10pt &quot;MS Shell Dlg 2l&quot;;
+background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+
+border:1px solid rgb(253, 254, 254);
+	color: rgb(255, 255, 255);
+border-radius:2px;
+}
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(63, 63, 63, 255), stop:1 rgba(33, 33, 33, 255));
+ background-color: qlineargradient(spread:pad, x1:0.505636, y1:0.221, x2:0.431818, y2:1, stop:0 rgba(89, 255, 255, 255), stop:1 rgba(60, 138, 255, 255));
+}
+QPushButton:pressed{
+background-color: qlineargradient(spread:pad, x1:0.767, y1:1, x2:1, y2:0, stop:0 rgba(0, 244, 255, 255), stop:1 rgba(3, 115, 255, 255));
+}</string>
+            </property>
+            <property name="text">
+             <string>Save</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
